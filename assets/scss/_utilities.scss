@@ -504,7 +504,7 @@ $utilities: map-merge(
     "font-family": (
       property: font-family,
       class: font,
-      values: (monospace: var(--#{$prefix}font-monospace), serif: var(--#{$prefix}font-serif), sans-serif: var(--#{$prefix}font-sans-serif), noto-serif: ('Noto Serif TC', serif), noto-sans: ('Noto Sans TC', sans-serif))
+      values: (monospace: var(--#{$prefix}font-monospace), serif: var(--#{$prefix}font-serif), sans-serif: var(--#{$prefix}font-sans-serif))
     ),
     "font-size": (
       rfs: true,
@@ -691,6 +691,7 @@ $utilities: map-merge(
         invisible: hidden,
       )
     ),
+    // scss-docs-end utils-visibility
     "object-fit": (
       responsive: true,
       property: object-fit,
@@ -768,7 +769,6 @@ $utilities: map-merge(
         3: 3
       )
     ),
-    // scss-docs-end utils-visibility
   ),
   $utilities
 );

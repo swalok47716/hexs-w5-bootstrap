@@ -298,10 +298,10 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       #7000FF; //$blue !default;
-$secondary:     #1F0F39; //$gray-600 !default;
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          #AD93CF; //$cyan !default;
+$info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $white; //$gray-100 !default;
@@ -467,8 +467,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px,
-  xxxl: 1784px
+  xxl: 1400px
 );
 // scss-docs-end grid-breakpoints
 
@@ -486,8 +485,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px,
-  xxxl: 1320px
+  xxl: 1320px
 );
 $container-max-width-xxxl: 1784px;
 // scss-docs-end container-max-widths
@@ -576,9 +574,9 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-serif:           'Shrikhand', cursive;
-$font-family-sans-serif:      'Noto Sans TC', sans-serif; //system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-serif:           'Lato', sans-serif;
+$font-family-sans-serif:      sans-serif; //system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       'Roboto Mono', monospace; //SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-serif), var(--#{$prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$prefix}font-monospace) !default;
@@ -606,14 +604,20 @@ $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base *  4; //64px
 $h2-font-size:                $font-size-base * 3.75; //60px
-$h3-font-size:                $font-size-base * 3; //48px
-$h4-font-size:                $font-size-base * 2; //32px
-$h5-font-size:                $font-size-base * 1.5; //24px
-$h6-font-size:                $font-size-base * 1.375; //22px
-$h7-font-size:                $font-size-base * 1.25; //20px
-$h8-font-size:                $font-size-base * 1.125; //18px
-$h9-font-size:                $font-size-base; //16px
-$h10-font-size:                $font-size-base * 0.875; //14px
+$h3-font-size:                $font-size-base * 3.5; //56px
+$h4-font-size:                $font-size-base * 3.25; //52px
+$h5-font-size:                $font-size-base * 3; //48px
+$h6-font-size:                $font-size-base * 2.75; //44px
+$h7-font-size:                $font-size-base * 2.5; //40px
+$h8-font-size:                $font-size-base * 2.25; //36px
+$h9-font-size:                $font-size-base * 2; //32px
+$h10-font-size:                $font-size-base * 1.75; //28px
+$h11-font-size:                $font-size-base * 1.5; //24px
+$h12-font-size:                $font-size-base * 1.375; //22px
+$h13-font-size:                $font-size-base * 1.25; //20px
+$h14-font-size:                $font-size-base * 1.125; //18px
+$h15-font-size:                $font-size-base; //16px
+$h16-font-size:                $font-size-base * 0.875; //14px
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes 
@@ -628,6 +632,12 @@ $font-sizes: (
   8: $h8-font-size,
   9: $h9-font-size,
   10: $h10-font-size,
+  11: $h11-font-size,
+  12: $h12-font-size,
+  13: $h13-font-size,
+  14: $h14-font-size,
+  15: $h15-font-size,
+  16: $h16-font-size,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -703,7 +713,7 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
+$table-cell-padding-y:        0.96875rem; //.5rem !default;
 $table-cell-padding-x:        .5rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
@@ -761,8 +771,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         0; //.375rem !default;
+$input-btn-padding-x:         0; //.75rem !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -771,7 +781,7 @@ $input-btn-focus-width:         .25rem !default;
 $input-btn-focus-color-opacity: .25 !default;
 $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-blur:          0 !default;
-$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $success; //$input-btn-focus-color !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
@@ -1102,8 +1112,8 @@ $zindex-toast:                      1090 !default;
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                0; //.5rem !default;
+$nav-link-padding-x:                0; //1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default;
@@ -1237,21 +1247,21 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  $dark; //var(--#{$prefix}link-color) !default;
 $pagination-bg:                     $white !default;
 $pagination-border-radius:          $border-radius !default;
 $pagination-border-width:           $border-width !default;
 $pagination-margin-start:           ($pagination-border-width * -1) !default;
-$pagination-border-color:           $gray-300 !default;
+$pagination-border-color:           $success; //$gray-300 !default;
 
-$pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
+$pagination-focus-color:            $success; //var(--#{$prefix}link-hover-color) !default;
 $pagination-focus-bg:               $gray-200 !default;
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-hover-bg:               $gray-200 !default;
-$pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-color:            $white; //var(--#{$prefix}link-hover-color) !default;
+$pagination-hover-bg:               $success; //$gray-200 !default;
+$pagination-hover-border-color:     $success; //$gray-300 !default;
 
 $pagination-active-color:           $component-active-color !default;
 $pagination-active-bg:              $component-active-bg !default;
@@ -1446,7 +1456,7 @@ $modal-content-color:               null !default;
 $modal-content-bg:                  $white !default;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent) !default;
 $modal-content-border-width:        $border-width !default;
-$modal-content-border-radius:       $border-radius-lg !default;
+$modal-content-border-radius:       0; //$border-radius-lg !default;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
 $modal-content-box-shadow-xs:       $box-shadow-sm !default;
 $modal-content-box-shadow-sm-up:    $box-shadow !default;
