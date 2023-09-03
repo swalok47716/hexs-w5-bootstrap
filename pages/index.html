@@ -12,37 +12,58 @@
 <body>
   <main class="d-flex align-items-start">
     <%- include('./layout/header'); -%>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container px-8">
+        <nav class="navbar navbar-expand-lg py-8">
+          <div class="w-100">
+            <button class="navbar-toggler border border-dark bg-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="#">Hidden brand</a>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <a class="navbar-brand fs-11 fw-bolder link-dark" href="#">Admin</a>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-0 ms-lg-12">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
+                  <button type="button" class="nav-link btn" aria-current="page" href="#">
+                    <p>
+                      <span class="material-icons fs-11 link-success">add</span>
+                      <span class="fw-bolder link-dark">Add New Admin</span>
+                    </p>
+                  </button>
                 </li>
               </ul>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+              <form class="d-flex ms-auto" role="search">
+                <div class="me-4">
+                  <div class="collapse collapse-horizontal" id="collapseSearch">
+                    <div style="width: 250px;">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                  </div>
+                </div>
+                <p class="order-first order-lg-0">
+                  <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSearch"
+                    aria-expanded="false" aria-controls="collapseSearch">
+                    <span class="material-icons fs-11 link-dark">search</span>
+                  </button>
+                </p>
               </form>
+              <p>
+                <button type="button" class="btn ms-0 ms-lg-6">
+                  <span class="material-icons fs-11">notifications_active</span>
+                </button>
+              </p>
             </div>
           </div>
         </nav>
-        <table class="table table-hover">
+        <table class="table table-hover mb-16">
           <thead>
             <tr>
-              <th scope="row" class="fw-bolder">ID</th>
+              <th scope="row" class="fw-bolder">
+                <span>ID</span>
+                <button type="button" class="btn link-success">
+                  <span class="material-icons">arrow_downward</span>
+                </button>
+              </th>
               <th scope="row" class="fw-bolder">Name</th>
               <th scope="row" class="fw-bolder">Email</th>
               <th scope="row" class="fw-bolder">Verified</th>
@@ -56,13 +77,170 @@
               <td>Emir Wicks</td>
               <td>emir.wicks@mail.com</td>
               <td>Yes</td>
-              <td><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
-                    class="material-icons fs-11">visibility</span> </button></td>
-              <td><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
-                    class="material-icons fs-11">mode_edit</span> </button></td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#2</th>
+              <td>Zaina Goldsmith</td>
+              <td>zaina.goldsmith@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#3</th>
+              <td>Mahima Lopez</td>
+              <td>mahima.lopez@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#4</th>
+              <td>Pharrell Murray</td>
+              <td>pharrell.murray@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#5</th>
+              <td>Annika Mcbride</td>
+              <td>annika.mcbride@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#6</th>
+              <td>Fatimah Clark</td>
+              <td>fatimah.clark@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#7</th>
+              <td>Klaudia Rhodes</td>
+              <td>klaudia.rhodes@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#8</th>
+              <td>Tillie Lucero</td>
+              <td>tillie.lucero@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#9</th>
+              <td>Sabrina Stephenson</td>
+              <td>sabrina.stephenson@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">#10</th>
+              <td>Annie Smith</td>
+              <td>annie.smith@mail.com</td>
+              <td>Yes</td>
+              <td></td>
+              <td>
+                <div class="d-flex justify-content-end gap-6">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#revealProfile"><span
+                      class="material-icons fs-11">visibility</span> </button>
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editAdmin"><span
+                      class="material-icons fs-11">mode_edit</span> </button>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
+        <nav>
+          <ul class="pagination justify-content-end">
+            <li class="page-item" style="--bs-pagination-color: #198754">
+              <a class="page-link" href="#" style="padding-top: 5px; padding-bottom: 5px;">
+                <span class="material-icons fs-11">navigate_before</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item" style="--bs-pagination-color: #198754">
+              <a class="page-link" href="#" style="padding-top: 5px; padding-bottom: 5px;">
+                <span class="material-icons fs-11">navigate_next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
       <div class="modal fade" id="revealProfile" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
