@@ -1,7 +1,8 @@
-.nav {
-  height: 82px;
+.user-pfp {
+  width: 40px !important;
 }
-.logo {
-  width: 53px;
-  height: 53px;
+
+.link-sidebar:hover {
+  color: $success !important;
+  border-left: 4px solid $success;
 }
