@@ -24,7 +24,7 @@
               <span class="navbar-brand fs-11 fw-bolder link-dark" href="#">Admin</span>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-0 ms-lg-12">
                 <li class="nav-item">
-                  <button type="button" class="nav-link btn" aria-current="page" href="#">
+                  <button type="button" class="nav-link btn" data-bs-toggle="modal" data-bs-target="#newAdmin">
                     <p>
                       <span class="material-icons fs-11 link-success">add</span>
                       <span class="fw-bolder link-dark">Add New Admin</span>
@@ -269,8 +269,10 @@
               </div>
               <div class="collapse mt-8" id="collapseAdminEditing">
                 <div class="d-flex justify-content-end gap-4">
-                  <button type="button" data-bs-dismiss="modal" class="btn btn-outline-danger btn-sm fw-bolder py-2 px-8">Deactivate</button>
-                  <button type="button" data-bs-toggle="modal" data-bs-target="#editAdmin" class="btn btn-success btn-sm fw-bolder py-2 px-8">Edit</button>
+                  <button type="button" data-bs-dismiss="modal"
+                    class="btn btn-outline-danger btn-sm fw-bolder py-2 px-8">Deactivate</button>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#editAdmin"
+                    class="btn btn-success btn-sm fw-bolder py-2 px-8">Edit</button>
                 </div>
               </div>
             </div>
@@ -280,11 +282,11 @@
       <div class="modal fade" id="editAdmin" tabindex="-1" aria-labelledby="editAdmin" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
-            <div class="modal-body p-8">
-              <div class="d-flex justify-content-between mb-8">
-                <h2 class="fs-11 fw-bolder">Edit Admin</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+            <div class="modal-header justify-content-between p-8">
+              <h2 class="fs-11 fw-bolder">Edit Admin</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-8 py-0">
               <div class="mb-6 border-bottom">
                 <h3 class="fs-13 fw-bolder mb-4">Account</h3>
                 <form>
@@ -304,7 +306,7 @@
                 <h3 class="fs-13 fw-bolder mb-4">Verification</h3>
                 <div class="mb-6 d-flex justify-content-between">
                   <p>
-                    <span class="material-icons fs-11 me-1">check_circle</span>
+                    <span class="material-icons fs-11 text-success me-1">check_circle</span>
                     <span class="fw-bolder">Verified</span>
                   </p>
                   <p class="fs-16">2020/4/12</p>
@@ -321,14 +323,121 @@
                   <option selected>Admin</option>
                 </select>
               </div>
+              <div class="mb-6 border-bottom pb-6 d-flex flex-column gap-4">
+                <h3 class="fs-13 fw-bolder">Custom Access</h3>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="lectureCheck" class="form-check-input">
+                  <label for="lectureCheck">Lecture</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="couponCheck" class="form-check-input">
+                  <label for="couponCheck">Coupon</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="messageCheck" class="form-check-input">
+                  <label for="messageCheck">Message</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="settingCheck" class="form-check-input">
+                  <label for="settingCheck">Setting</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="taskMenuCheck" class="form-check-input">
+                  <label for="taskMenuCheck">Task Menu</label>
+                </div>
+              </div>
+              <div class="mb-6">
+                <h3 class="fs-13 fw-bolder mb-4">Deactive Account</h3>
+                <p class="mb-5">
+                  <span class="material-icons fs-11 text-danger me-2">warning</span>
+                  <span class="text-danger">This cannot be undone!</span>
+                </p>
+                <button type="button" class="btn btn-outline-danger btn-sm w-100 py-4 fw-bolder">Deactivate This
+                  Account</button>
+              </div>
             </div>
             <div class="modal-footer">
               <div class="d-flex justify-content-end gap-4">
                 <button type="button" class="btn btn-outline-success btn-sm py-2 px-8 fw-bolder"
                   data-bs-dismiss="modal">Cancel</button>
-                <button type="button" data-bs-dismiss="modal" class="btn btn-success btn-sm py-2 px-8 fw-bolder">Save changes</button>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-success btn-sm py-2 px-8 fw-bolder">Save
+                  changes</button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="newAdmin" tabindex="-1" aria-labelledby="newAdmin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-body p-8 pb-4">
+              <div class="d-flex justify-content-between mb-8">
+                <h2 class="fs-11 fw-bolder">New Admin</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="mb-6 border-bottom">
+                <h3 class="fs-13 fw-bolder mb-4">Account</h3>
+                <form>
+                  <div class="mb-4">
+                    <label for="accountName" class="form-label">Name</label>
+                    <input type="text" class="form-control rounded-0 border-dark p-4" id="accountName" value="">
+                  </div>
+                  <div class="mb-6">
+                    <label for="accountEmail" class="form-label">Email</label>
+                    <input type="text" class="form-control rounded-0 border-dark p-4" id="accountEmail" value="">
+                  </div>
+                </form>
+              </div>
+              <div class="mb-6 border-bottom">
+                <h3 class="fs-13 fw-bolder mb-4">Verification</h3>
+                <div class="mb-6">
+                  <p>
+                    <span class="material-icons fs-11 text-danger me-1">warning</span>
+                    <span class="fw-bolder">Unverified</span>
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <button type="submit" class="w-100 btn btn-outline-success rounded-0 border py-4 fw-bolder"
+                    style="border-color: #CED4DA !important;">Send Verification Mail</button>
+                </div>
+              </div>
+              <div class="mb-6 border-bottom">
+                <h3 class="fs-13 fw-bolder mb-4">Access Level</h3>
+                <select id="selectAdmin" class="mb-6 form-select rounded-0 border-dark p-4 shadow-none">
+                  <option selected>-Choose access level-</option>
+                  <option>Admin</option>
+                </select>
+              </div>
+              <div class="mb-6 d-flex flex-column gap-4">
+                <h3 class="fs-13 fw-bolder">Custom Access</h3>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="lectureCheck" class="form-check-input">
+                  <label for="lectureCheck">Lecture</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="couponCheck" class="form-check-input">
+                  <label for="couponCheck">Coupon</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="messageCheck" class="form-check-input">
+                  <label for="messageCheck">Message</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="settingCheck" class="form-check-input">
+                  <label for="settingCheck">Setting</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" value="" id="taskMenuCheck" class="form-check-input">
+                  <label for="taskMenuCheck">Task Menu</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end gap-4">
+                <button type="button" class="btn btn-outline-success btn-sm py-2 px-8 fw-bolder"
+                  data-bs-dismiss="modal">Cancel</button>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-success btn-sm py-2 px-8 fw-bolder">Add</button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
