@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">    <title>index</title>
-  <script type="module" crossorigin src="/hexschool-w5/assets/index-982b0718.js"></script>
-  <link rel="stylesheet" href="/hexschool-w5/assets/index-5134f800.css">
+  <script type="module" crossorigin src="/hexschool-w5/assets/index-88a18f4b.js"></script>
+  <link rel="stylesheet" href="/hexschool-w5/assets/index-6aa29170.css">
 </head>
 
 <body>
@@ -318,24 +318,48 @@
                   <span class="fs-16 text-secondary">emir.wicks@mail.com</span>
                   <div class="py-1 px-2 mt-auto bg-light"><span>Verified</span></div>
                 </div>
-                <div class="ms-auto d-flex flex-column align-items-center">
+                <div class="ms-auto d-flex flex-column align-items-center justify-content-between">
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  <p class="mt-auto">
+                  <div class="accordion accordion-flush" id="accordionRevealProfileBtn">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed p-0" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#accordionCollapseRevealProfile" aria-expanded="false" aria-controls="flush-collapseOne">
+                        </button>
+                      </h2>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-auto">
                     <button class="btn link-success" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseAdminEditing" aria-expanded="false" aria-controls="collapseAdminEditing">
                       <span class="material-icons fs-11">expand_more</span>
                     </button>
-                  </p>
+                  </p> -->
                 </div>
               </div>
-              <div class="collapse mt-8" id="collapseAdminEditing">
+              <div class="accordion accordion-flush" id="accordionRevealProfileContent">
+                <div class="accordion-item">
+                  <div id="accordionCollapseRevealProfile" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionRevealProfileContent">
+                    <div class="accordion-body p-0 mt-8">
+                      <div class="d-flex justify-content-end gap-4">
+                        <button type="button" data-bs-dismiss="modal"
+                          class="btn btn-outline-danger btn-sm fw-bolder py-2 px-8">Deactivate</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#editAdmin"
+                          class="btn btn-success btn-sm fw-bolder py-2 px-8">Edit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="collapse mt-8" id="collapseAdminEditing">
                 <div class="d-flex justify-content-end gap-4">
                   <button type="button" data-bs-dismiss="modal"
                     class="btn btn-outline-danger btn-sm fw-bolder py-2 px-8">Deactivate</button>
                   <button type="button" data-bs-toggle="modal" data-bs-target="#editAdmin"
                     class="btn btn-success btn-sm fw-bolder py-2 px-8">Edit</button>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -495,7 +519,8 @@
               <div class="d-flex justify-content-end gap-4">
                 <button type="button" class="btn btn-outline-success btn-sm py-2 px-8 fw-bolder"
                   data-bs-dismiss="modal">Cancel</button>
-                <button type="button" data-bs-dismiss="modal" class="btn btn-success btn-sm py-2 px-8 fw-bolder">Add</button>
+                <button type="button" data-bs-dismiss="modal"
+                  class="btn btn-success btn-sm py-2 px-8 fw-bolder">Add</button>
               </div>
             </div>
 
